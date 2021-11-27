@@ -7,14 +7,8 @@
     tools:context=".fragments.RegistroFallasFragment">
 
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
         android:text="@string/lblIngreseFalla"
-        android:textAlignment="center"
-        android:textAllCaps="true"
-        android:textStyle="bold"
-        android:textColor="@color/black"
-        android:textSize="22sp"
+        style="@style/myTextViewTitles"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
