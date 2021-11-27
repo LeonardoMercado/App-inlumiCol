@@ -4,15 +4,36 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:paddingLeft="8dp"
+    android:paddingTop="16dp"
+    android:paddingRight="8dp"
     tools:context=".fragments.RegistroFallasFragment">
 
     <TextView
-        android:text="@string/lblIngreseFalla"
+        android:id="@+id/lblFallastitulo"
         style="@style/myTextViewTitles"
+        android:text="@string/lblIngreseFalla"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <Spinner
+        android:id="@+id/spMunicipio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:focusable="true"
+        android:textAlignment="center"
+        android:layout_gravity="center"
+        android:gravity="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lblFallastitulo"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
