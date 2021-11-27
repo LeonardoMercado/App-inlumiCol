@@ -15,9 +15,8 @@ class RegistroFallasFragment : Fragment(){
     private val binding get() = _binding!!
     //------------------------------------------------------------------------
 
-    // Variables -------------------------------------------------------------
+    // Valores -------------------------------------------------------------
     private val municipiosList = listOf(
-        "Municipio",
         "Soacha",
         "Zipaquirá",
         "Fusagasugá",
@@ -27,6 +26,16 @@ class RegistroFallasFragment : Fragment(){
         "La Calera",
         "Mosquera",
         "Guatavita"
+    )
+    private val fallasList = listOf(
+        "Luminaria apagada",
+        "Luminaria colgante (a punto de caer)",
+        "Luminaria encendida de día",
+        "Luminaria intermitente",
+        "Luminaria robada",
+        "Falta tapa caja inspección AP",
+        "Luminaria girada",
+        "Otro"
     )
     //------------------------------------------------------------------------
 
@@ -40,17 +49,25 @@ class RegistroFallasFragment : Fragment(){
     }
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
+    }
+    override fun onResume() {
+        super.onResume()
         // Llenar los spinners con datos:
         llenarSpinners()
     }
     private fun llenarSpinners() {
         // Para el spinner municipio
-        binding.spMunicipio.adapter = ArrayAdapter(
+        binding.spMunicipio.setAdapter(ArrayAdapter(
             requireContext(),
             R.layout.spinner_item_personalised,
             municipiosList
-        )
+        ))
+        // Para el spinner tipo de fallas
+        binding.tipoFalla.setAdapter(ArrayAdapter(
+            requireContext(),
+            R.layout.spinner_item_personalised,
+            fallasList
+        ))
     }
     override fun onDestroyView() {
         super.onDestroyView()
