@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/registroFallasFragment">
+
+    <fragment
+        android:id="@+id/registroFallasFragment"
+        android:name="com.unal.inlumicol.fragments.RegistroFallasFragment"
+        android:label="fragment_registro_fallas"
+        tools:layout="@layout/fragment_registro_fallas" />
+</navigation>

@@ -13,9 +13,5 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-
-        binding.textTest.text = "Probando el View Binding"
-
-
     }
 }

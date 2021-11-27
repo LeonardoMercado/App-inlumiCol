@@ -1,3 +1,15 @@
 <resources>
-    <string name="app_name">inlumiCol</string>
+    <string name="app_name">InlumiCol</string>
+
+    <!--LABELS-->
+    <string name="lblIngreseFalla">Ingrese los datos sobre la falla</string>
+
+    <!--HINTS-->
+
+    <!--BUTTONS-->
+
+    <!--MSG TO USER-->
+
+
+
 </resources>
