@@ -20,11 +20,9 @@
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/layout_lista_municipios"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        style="@style/myExposedDropdownMenu"
         android:layout_marginTop="24dp"
-        android:hint="Municipio"
+        android:hint="@string/hintMunicipio"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
@@ -32,20 +30,14 @@
 
         <AutoCompleteTextView
             android:id="@+id/spMunicipio"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:gravity="center"
-            android:inputType="none"
-            android:textSize="22sp" />
+            style="@style/mySpinner" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/layout_lista_fallas"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        style="@style/myExposedDropdownMenu"
         android:layout_marginTop="24dp"
-        android:hint="Tipo de Falla"
+        android:hint="@string/hintTipoFalla"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
@@ -53,14 +45,20 @@
 
         <AutoCompleteTextView
             android:id="@+id/tipoFalla"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:gravity="center"
-            android:inputType="none"
-            android:textSize="22sp" />
+            style="@style/mySpinner" />
 
 
     </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:text="TextView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layout_lista_fallas" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

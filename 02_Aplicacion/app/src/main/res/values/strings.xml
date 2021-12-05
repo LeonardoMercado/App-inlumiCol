@@ -5,6 +5,8 @@
     <string name="lblIngreseFalla">Ingrese los datos sobre la falla</string>
 
     <!--HINTS-->
+    <string name="hintMunicipio">Municipio</string>
+    <string name="hintTipoFalla">Tipo de Falla</string>
 
     <!--BUTTONS-->
 
