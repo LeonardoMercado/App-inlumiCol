@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ArrayAdapter
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import com.unal.inlumicol.R
 import com.unal.inlumicol.databinding.FragmentRegistroFallasBinding
@@ -49,6 +50,14 @@ class RegistroFallasFragment : Fragment(){
     }
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        binding.btnFoto.setOnClickListener{
+            messageUser("Entramos a enviar foto")
+            // TODO("código para enviar foto a la DB")
+        }
+        binding.btnUbicacion.setOnClickListener{
+            messageUser("Entramos a hallar la ubicación de la falla")
+            // TODO("código para enviar foto a la DB")
+        }
     }
     override fun onResume() {
         super.onResume()
@@ -72,5 +81,8 @@ class RegistroFallasFragment : Fragment(){
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
+    }
+    private fun messageUser(msg: String){
+        Toast.makeText(requireContext(),msg,Toast.LENGTH_SHORT).show()
     }
 }

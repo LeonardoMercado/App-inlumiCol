@@ -9,56 +9,85 @@
     android:paddingRight="8dp"
     tools:context=".fragments.RegistroFallasFragment">
 
-    <TextView
-        android:id="@+id/lblFallastitulo"
-        style="@style/myTextViewTitles"
-        android:text="@string/lblIngreseFalla"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        <TextView
+            android:id="@+id/lblFallastitulo"
+            style="@style/myTextViewTitles"
+            android:text="@string/lblIngreseFalla"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/layout_lista_municipios"
-        style="@style/myExposedDropdownMenu"
-        android:layout_marginTop="24dp"
-        android:hint="@string/hintMunicipio"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/lblFallastitulo">
+        <!--
 
-        <AutoCompleteTextView
-            android:id="@+id/spMunicipio"
-            style="@style/mySpinner" />
-    </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/layout_lista_municipios"
+            style="@style/myExposedDropdownMenu"
+            android:layout_marginTop="24dp"
+            android:hint="@string/hintMunicipio"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/lblFallastitulo">
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/layout_lista_fallas"
-        style="@style/myExposedDropdownMenu"
-        android:layout_marginTop="24dp"
-        android:hint="@string/hintTipoFalla"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/layout_lista_municipios">
+                <AutoCompleteTextView
+                    android:id="@+id/spMunicipio"
+                    style="@style/mySpinner" />
+        </com.google.android.material.textfield.TextInputLayout>
 
-        <AutoCompleteTextView
-            android:id="@+id/tipoFalla"
-            style="@style/mySpinner" />
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/layout_lista_fallas"
+            style="@style/myExposedDropdownMenu"
+            android:layout_marginTop="24dp"
+            android:hint="@string/hintTipoFalla"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/layout_lista_municipios">
+
+                <AutoCompleteTextView
+                    android:id="@+id/tipoFalla"
+                    style="@style/mySpinner" />
 
 
-    </com.google.android.material.textfield.TextInputLayout>
+        </com.google.android.material.textfield.TextInputLayout>
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="24dp"
-        android:text="TextView"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/layout_lista_fallas" />
+        <TextView
+            android:id="@+id/lblFoto"
+            style="@style/mysubTextViewTitles"
+            android:layout_marginTop="24dp"
+            android:text="@string/lblFoto"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/layout_lista_fallas" />
 
+        <ImageButton
+            android:id="@+id/btnFoto"
+            style="@style/myImageButton"
+            android:src="@drawable/ic_foto"
+            android:contentDescription="@string/btnFotoDescription"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/lblFoto" />
+
+        <TextView
+            android:id="@+id/lblUbicacion"
+            style="@style/mysubTextViewTitles"
+            android:layout_marginTop="24dp"
+            android:text="@string/lblUbicacion"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnFoto" />
+
+        <ImageView
+            android:id="@+id/btnUbicacion"
+            style="@style/myImageButton"
+            android:layout_marginTop="24dp"
+            android:src="@drawable/ic_map"
+            android:contentDescription="@string/btnUbicacionDescription"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/lblUbicacion" />
+
+         -->
 
 </androidx.constraintlayout.widget.ConstraintLayout>

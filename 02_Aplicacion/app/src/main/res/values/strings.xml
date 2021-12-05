@@ -3,12 +3,17 @@
 
     <!--LABELS-->
     <string name="lblIngreseFalla">Ingrese los datos sobre la falla</string>
+    <string name="lblFoto">Foto:</string>
+    <string name="lblUbicacion">Ubicación:</string>
 
     <!--HINTS-->
     <string name="hintMunicipio">Municipio</string>
     <string name="hintTipoFalla">Tipo de Falla</string>
 
     <!--BUTTONS-->
+    <string name="btnFotoDescription">Click para subir una foto</string>
+    <string name="btnUbicacionDescription">Click para ingresar una ubicación</string>
+
 
     <!--MSG TO USER-->
 
