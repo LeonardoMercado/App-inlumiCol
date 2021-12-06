@@ -10,6 +10,9 @@
     <string name="imbutton">boton con imagen</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="TECNICOS">TECNICOS</string>
+    <string name="INGRESE_DATOS_DEL_TECNICO">INGRESE DATOS DEL TECNICO</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
     <!--MSG TO USER-->
 
 
