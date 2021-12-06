@@ -8,6 +8,8 @@
 
     <!--BUTTONS-->
     <string name="imbutton">boton con imagen</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="TECNICOS">TECNICOS</string>
     <!--MSG TO USER-->
 
 

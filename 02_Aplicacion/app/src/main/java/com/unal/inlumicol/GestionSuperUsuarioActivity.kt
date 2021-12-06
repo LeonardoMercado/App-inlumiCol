@@ -12,5 +12,10 @@ class GestionSuperUsuarioActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityGestionSuperUsuarioBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+       // supportFragmentManager.beginTransaction().apply {
+       //     replace(R.id.fragmenContainerSuperUsuario)
+       // }
+
     }
 }
