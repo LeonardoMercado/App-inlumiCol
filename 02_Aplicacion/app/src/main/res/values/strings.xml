@@ -5,6 +5,9 @@
     <string name="lblIngreseFalla">Ingrese los datos sobre la falla</string>
     <string name="lblFoto">Foto:</string>
     <string name="lblUbicacion">Ubicación:</string>
+    <string name="lblLogin">Ingresar</string>
+    <string name="lblSettings">más</string>
+    <string name="lblCheck">Validar</string>
 
     <!--HINTS-->
     <string name="hintMunicipio">Municipio</string>
