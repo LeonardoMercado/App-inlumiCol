@@ -50,7 +50,6 @@ class RegistroFallasFragment : Fragment(){
     }
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        /*
         binding.btnFoto.setOnClickListener{
             messageUser("Entramos a enviar foto")
             // TODO("código para enviar foto a la DB")
@@ -59,15 +58,13 @@ class RegistroFallasFragment : Fragment(){
             messageUser("Entramos a hallar la ubicación de la falla")
             // TODO("código para enviar foto a la DB")
         }
-
-         */
     }
     override fun onResume() {
         super.onResume()
         // Llenar los spinners con datos:
-        //llenarSpinners()
+        llenarSpinners()
     }
-    /*
+
     private fun llenarSpinners() {
         // Para el spinner municipio
         binding.spMunicipio.setAdapter(ArrayAdapter(
@@ -82,8 +79,6 @@ class RegistroFallasFragment : Fragment(){
             fallasList
         ))
     }
-
-     */
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null

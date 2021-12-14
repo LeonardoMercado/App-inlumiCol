@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -7,88 +7,77 @@
     android:paddingTop="16dp"
     tools:context=".fragments.RegistroFallasFragment">
 
-        <TextView
-            android:id="@+id/lblFallastitulo"
-            style="@style/myTextViewTitles"
-            android:text="@string/lblIngreseFalla"
+        <ScrollView
+            style="@style/myScrollView"
+            app:layout_constraintBottom_toTopOf="@+id/bottom_menu"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent">
 
-        <!--
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical">
 
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/layout_lista_municipios"
-            style="@style/myExposedDropdownMenu"
-            android:layout_marginTop="24dp"
-            android:hint="@string/hintMunicipio"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/lblFallastitulo">
+                        <TextView
+                            android:id="@+id/lblFallastitulo"
+                            style="@style/myTextViewTitles"
+                            android:text="@string/lblIngreseFalla" />
 
-                <AutoCompleteTextView
-                    android:id="@+id/spMunicipio"
-                    style="@style/mySpinner" />
-        </com.google.android.material.textfield.TextInputLayout>
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/layout_lista_municipios"
+                            style="@style/myExposedDropdownMenu"
+                            android:layout_marginTop="24dp"
+                            android:hint="@string/hintMunicipio">
 
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/layout_lista_fallas"
-            style="@style/myExposedDropdownMenu"
-            android:layout_marginTop="24dp"
-            android:hint="@string/hintTipoFalla"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/layout_lista_municipios">
+                                <AutoCompleteTextView
+                                    android:id="@+id/spMunicipio"
+                                    style="@style/mySpinner" />
+                        </com.google.android.material.textfield.TextInputLayout>
 
-                <AutoCompleteTextView
-                    android:id="@+id/tipoFalla"
-                    style="@style/mySpinner" />
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/layout_lista_fallas"
+                            style="@style/myExposedDropdownMenu"
+                            android:layout_marginTop="24dp"
+                            android:hint="@string/hintTipoFalla">
 
+                                <AutoCompleteTextView
+                                    android:id="@+id/tipoFalla"
+                                    style="@style/mySpinner" />
 
-        </com.google.android.material.textfield.TextInputLayout>
+                        </com.google.android.material.textfield.TextInputLayout>
 
-        <TextView
-            android:id="@+id/lblFoto"
-            style="@style/mysubTextViewTitles"
-            android:layout_marginTop="24dp"
-            android:text="@string/lblFoto"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/layout_lista_fallas" />
+                        <TextView
+                            android:id="@+id/lblFoto"
+                            style="@style/mysubTextViewTitles"
+                            android:layout_marginTop="24dp"
+                            android:text="@string/lblFoto" />
 
-        <ImageButton
-            android:id="@+id/btnFoto"
-            style="@style/myImageButton"
-            android:src="@drawable/ic_foto"
-            android:contentDescription="@string/btnFotoDescription"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/lblFoto" />
+                        <ImageButton
+                            android:id="@+id/btnFoto"
+                            style="@style/myImageButton"
+                            android:layout_marginTop="16dp"
+                            android:contentDescription="@string/btnFotoDescription"
+                            android:src="@drawable/ic_foto" />
 
-        <TextView
-            android:id="@+id/lblUbicacion"
-            style="@style/mysubTextViewTitles"
-            android:layout_marginTop="24dp"
-            android:text="@string/lblUbicacion"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/btnFoto" />
+                        <TextView
+                            android:id="@+id/lblUbicacion"
+                            style="@style/mysubTextViewTitles"
+                            android:layout_marginTop="16dp"
+                            android:text="@string/lblUbicacion" />
 
-        <ImageView
-            android:id="@+id/btnUbicacion"
-            style="@style/myImageButton"
-            android:layout_marginTop="24dp"
-            android:src="@drawable/ic_map"
-            android:contentDescription="@string/btnUbicacionDescription"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/lblUbicacion" />
+                        <ImageView
+                            android:id="@+id/btnUbicacion"
+                            style="@style/myImageButton"
+                            android:layout_marginTop="16dp"
+                            android:layout_marginBottom="50dp"
+                            android:contentDescription="@string/btnUbicacionDescription"
+                            android:src="@drawable/ic_map" />
 
-         -->
-
-
+                </LinearLayout>
+        </ScrollView>
 
         <com.google.android.material.bottomappbar.BottomAppBar
             android:id="@+id/bottom_menu"
@@ -96,19 +85,26 @@
             android:layout_height="wrap_content"
             android:layout_gravity="bottom"
             android:backgroundTint="@color/secondary"
-            app:fabCradleMargin="5dp"
-            app:fabCradleRoundedCornerRadius="10dp"
-            app:menu="@menu/menu_bottom_fallas" />
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:menu="@menu/menu_bottom_fallas"
+            tools:ignore="BottomAppBar" />
 
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
-            android:id="@+id/floatingActionButton"
+            android:id="@+id/btnRegistroFalla"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="-28dp"
             android:backgroundTint="@color/primary"
             android:src="@drawable/ic_check"
             app:layout_anchor="@id/bottom_menu"
-            app:maxImageSize="50dp"
+            app:layout_constraintBottom_toTopOf="@+id/bottom_menu"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:maxImageSize="54dp"
             tools:ignore="SpeakableTextPresentCheck" />
 
-</androidx.coordinatorlayout.widget.CoordinatorLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
