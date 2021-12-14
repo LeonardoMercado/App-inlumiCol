@@ -9,13 +9,19 @@
     <string name="lblSettings">más</string>
     <string name="lblCheck">Validar</string>
 
+    <string name="lblFinalizarReporte">Finalizar reporte</string>
+    <string name="lblNotificado">¿Desea ser notificado?</string>
+
     <!--HINTS-->
     <string name="hintMunicipio">Municipio</string>
     <string name="hintTipoFalla">Tipo de Falla</string>
+    <string name="hintCorreoOptcional">Correo</string>
 
     <!--BUTTONS-->
     <string name="btnFotoDescription">Click para subir una foto</string>
     <string name="btnUbicacionDescription">Click para ingresar una ubicación</string>
+    <string name="btnCancelar">Cancelar</string>
+    <string name="btnConfirmar">Confirmar</string>
 
 
     <!--MSG TO USER-->

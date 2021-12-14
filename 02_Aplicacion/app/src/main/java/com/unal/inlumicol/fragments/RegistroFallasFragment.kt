@@ -5,6 +5,7 @@ import android.view.*
 import android.widget.ArrayAdapter
 import android.widget.Toast
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import com.unal.inlumicol.R
 import com.unal.inlumicol.databinding.FragmentRegistroFallasBinding
 
@@ -53,13 +54,17 @@ class RegistroFallasFragment : Fragment(){
             // TODO("código para enviar foto a la DB")
         }
         binding.btnUbicacion.setOnClickListener{
-            messageUser("Entramos a hallar la ubicación de la falla")
+            messageUser("Entramos en buscar la ubicación")
             // TODO("código para enviar foto a la DB")
+
         }
+        // Acción btn positivo {icon check}
         binding.btnRegistroFalla.setOnClickListener{
-            messageUser("Entramos a enviar la falla")
-            // TODO("código para enviar reporte de falla")
+            // Go to fallas dialog
+            findNavController().navigate(R.id.action_registroFallasFragment_to_dialog_fallas)
+
         }
+        // Acciones de los botones del menú inferior
         binding.bottomMenu.setOnMenuItemClickListener {
             when(it.itemId){
                 R.id.loginUser -> {
@@ -75,9 +80,7 @@ class RegistroFallasFragment : Fragment(){
                 else -> false
             }
         }
-
     }
-
     override fun onResume() {
         super.onResume()
         // Llenar los spinners con datos:

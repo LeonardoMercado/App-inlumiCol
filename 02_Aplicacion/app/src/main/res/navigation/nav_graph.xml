@@ -9,5 +9,15 @@
         android:id="@+id/registroFallasFragment"
         android:name="com.unal.inlumicol.fragments.RegistroFallasFragment"
         android:label="fragment_registro_fallas"
-        tools:layout="@layout/fragment_registro_fallas" />
+        tools:layout="@layout/fragment_registro_fallas" >
+        <action
+            android:id="@+id/action_registroFallasFragment_to_dialog_fallas"
+            app:destination="@id/dialog_fallas" />
+    </fragment>
+
+    <dialog
+        android:id="@+id/dialog_fallas"
+        android:name="com.unal.inlumicol.dialogs.Dialog_fallas"
+        android:label="Dialog_fallas" />
+
 </navigation>
