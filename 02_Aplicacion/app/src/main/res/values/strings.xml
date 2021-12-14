@@ -15,7 +15,7 @@
     <!--HINTS-->
     <string name="hintMunicipio">Municipio</string>
     <string name="hintTipoFalla">Tipo de Falla</string>
-    <string name="hintCorreoOptcional">Correo</string>
+    <string name="hintCorreoOptcional">Correo(opcional)</string>
 
     <!--BUTTONS-->
     <string name="btnFotoDescription">Click para subir una foto</string>
