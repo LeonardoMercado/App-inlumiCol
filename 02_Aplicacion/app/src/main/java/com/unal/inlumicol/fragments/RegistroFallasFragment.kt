@@ -1,9 +1,7 @@
 package com.unal.inlumicol.fragments
 
 import android.os.Bundle
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
+import android.view.*
 import android.widget.ArrayAdapter
 import android.widget.Toast
 import androidx.fragment.app.Fragment
@@ -58,13 +56,37 @@ class RegistroFallasFragment : Fragment(){
             messageUser("Entramos a hallar la ubicación de la falla")
             // TODO("código para enviar foto a la DB")
         }
+        binding.btnRegistroFalla.setOnClickListener{
+            messageUser("Entramos a enviar la falla")
+            // TODO("código para enviar reporte de falla")
+        }
+        binding.bottomMenu.setOnMenuItemClickListener {
+            when(it.itemId){
+                R.id.loginUser -> {
+                    messageUser("Entramos a login")
+                    // TODO("ir al fragmento para hacer login")
+                    true
+                }
+                R.id.dots -> {
+                    messageUser("Entramos a configuración")
+                    // TODO("ir a configuraciones")
+                    true
+                }
+                else -> false
+            }
+        }
+
     }
+
     override fun onResume() {
         super.onResume()
         // Llenar los spinners con datos:
         llenarSpinners()
     }
-
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding = null
+    }
     private fun llenarSpinners() {
         // Para el spinner municipio
         binding.spMunicipio.setAdapter(ArrayAdapter(
@@ -78,10 +100,6 @@ class RegistroFallasFragment : Fragment(){
             R.layout.spinner_item_personalised,
             fallasList
         ))
-    }
-    override fun onDestroyView() {
-        super.onDestroyView()
-        _binding = null
     }
     private fun messageUser(msg: String){
         Toast.makeText(requireContext(),msg,Toast.LENGTH_SHORT).show()
